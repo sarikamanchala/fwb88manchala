@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  p 
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let cat = [
+                    {
+                        "Brand": "LongFur",
+                        "price": 100,
+                        "color": "White"
+                    },
+                    {
+                        "Brand": "RussianBlue",
+                        "price": 200,
+                        "color": "Brown"
+                    },
+                    {
+                        "Brand": "siamese",
+                        "price": 400,
+                        "color": "Black"
+                    },                   
+                ]
+            each v,index in cat 
+                div(class="col-sm-2" ) #{v.Brand}
+                div(class="col-sm-2" ) #{v.price}
+                div(class="col-sm-2" ) #{v.color}
